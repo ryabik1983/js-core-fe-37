@@ -61,25 +61,25 @@
 // let age = 21;
 // (age >= 18) ? console.log('Вам можно!') : console.log('Вам нельзя!');
 
-let b = 5;
-switch (b) {
-    case b > 0 || b <= 5:
-        console.log(`0-5`);
-        break;
-    case b > 5 && b <= 10:
-        console.log('5-10');
-        break;
-    case b > 10 && b <= 15:
-        console.log('10-15');
-        break;
-    case b > 15 && b <= 20:
-        console.log('15-20');
-        break;
-    default:
-        console.log(`число больше 20`);
+// let b = 5;
+// switch (b) {
+//     case (b > 0):
+//         console.log(`0-5`);
+//         break;
+//     case (b > 5):
+//         console.log('5-10');
+//         break;
+//     case (b > 10):
+//         console.log('10-15');
+//         break;
+//     case (b > 15):
+//         console.log('15-20');
+//         break;
+//     default:
+//         console.log(`число больше 20`);
 
 
-}
+// }
 // if (b > 0 && b <= 5) {
 //     console.log('0-5');
 // }
@@ -106,3 +106,34 @@ switch (b) {
 //     default:
 //         console.log(`${day} - выходной день!`)
 // }
+
+// console.log(isNaN(NaN));
+// console.log(isNaN(0));
+// console.log(isNaN('0.4'));
+// console.log(isNaN(Infinity));
+// console.log(isNaN('Infinity'));
+
+// let result = 1;
+// if (result > 0) {
+//     let result = 111;
+//     result += 10; 
+//     console.log ("LOCAL :", result);
+// }
+// console.log('GLOBAL :', result);
+
+const max = 10;
+let y = 10; 
+let i = 0;
+// while(y<max){
+//     y = y + 1;
+//     i += 1;
+//     console.log(`итерация  ${i}:`, y);
+// }
+// do {y = y + 1;
+//     i += 1;
+//     console.log(`итерация  ${i}:`, y);}
+// while(y < max)
+for(let i = 0; i <= 10; i += 3){
+    console.log(`${i}`)
+}
+// clg

@@ -121,19 +121,20 @@
 // }
 // console.log('GLOBAL :', result);
 
-const max = 10;
-let y = 10; 
-let i = 0;
-// while(y<max){
-//     y = y + 1;
-//     i += 1;
-//     console.log(`итерация  ${i}:`, y);
+// const max = 10;
+// let y = 10;
+// let i = 0;
+// // while(y<max){
+// //     y = y + 1;
+// //     i += 1;
+// //     console.log(`итерация  ${i}:`, y);
+// // }
+// // do {y = y + 1;
+// //     i += 1;
+// //     console.log(`итерация  ${i}:`, y);}
+// // while(y < max)
+// for (let i = 0; i <= 10; i += 3) {
+//     console.log(`${i}`)
 // }
-// do {y = y + 1;
-//     i += 1;
-//     console.log(`итерация  ${i}:`, y);}
-// while(y < max)
-for(let i = 0; i <= 10; i += 3){
-    console.log(`${i}`)
-}
 // clg
+

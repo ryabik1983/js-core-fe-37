@@ -45,7 +45,54 @@ let total = 0;
 // }
 // console.log('Total :', total);
 
-for (const value of cart) {
-    total += value;
+// for (const value of cart) {
+//     total += value;
+// }
+// console.log('Total :', total);
+
+
+const array = [1, 2, 3, 'JS', 4, 5, 6];
+console.table(array);
+
+// console.log(array.length);
+
+// console.log(array[3]);
+// array[0] = 'HTML';
+// console.log(array[0]);
+
+// delete array[1];
+// delete array[2];
+// console.log(array[1]); 
+// console.log(array[2]);
+// console.log(array);
+for(let i = 0; i < array.length; i += 1){
+        if(typeof array[i] === 'string'){
+        continue}
+        // console.log(`итерация - ${i + 1}`, array[i]);
+    
+    }
+    
+for(let i = 0; i < array.length; i += 1){
+
+    if(typeof array[i] === 'string'){
+    break}
+    // console.log(`итерация - ${i + 1}`, array[i]);
+    // console.log('BREAK');
+
 }
-console.log('Total :', total);
+
+const multiArray = [
+    [1, 10, 100, 1000],
+    [2, 20, 200, 2000],
+    [3, 30, 300, 3000],
+]
+let it = 1;
+console.log(multiArray);
+for (let array of multiArray){
+    console.log(`iteration - ${it}`, array);
+    it += 1;
+}
+
+
+
+

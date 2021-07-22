@@ -146,5 +146,45 @@ console.log(numbers);
 //                  DELETE
 
 const exampleArray = [1, 1, 2, 3, 4, 4];
-console.log(exampleArray);
+console.table(exampleArray);
+// const unshiftElem = exampleArray.unshift(0);
+// console.log(unshiftElem);
+// console.log(exampleArray);
+// const pushElem = exampleArray.push(5, 5);
+// console.log(exampleArray);
+
+// const shiftElem = exampleArray.shift();
+// console.log(exampleArray);
+
+// const popElem = exampleArray.pop();
+// console.log(exampleArray);
+
+// let deleteSplice = exampleArray.splice(1, 3);
+// console.log(deleteSplice);
+// console.log(exampleArray);
+// let addSplice = exampleArray.splice(3, 0, 'I', 'LOVE', 'JS');
+// // console.log(addSplice);
+// console.log(exampleArray);
+
+// let replaseSplice = exampleArray.splice(5, 1, 'React', 'Node JS');
+// console.log(replaseSplice);
+const firstPiece = [1, 2];
+// console.log(firstPiece);
+const secondPiece = [3, 4];
+// console.log(secondPiece);
+
+const thirdPiece = [5, 6] ;
+// console.log(thirdPiece);
+
+const fullArray = firstPiece.concat(secondPiece, thirdPiece);
+// console.log(fullArray);
+
+
+
+
+
+
+
+
+
 

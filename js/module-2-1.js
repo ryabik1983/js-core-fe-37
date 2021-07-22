@@ -135,8 +135,8 @@ const myArray = ['I', 'Love', 'JS'];
 let myFavourArray = myArray.join('-');
 // console.log(myFavourArray);
 
-console.log(myArray);
-console.log(numbers);
+// console.log(myArray);
+// console.log(numbers);
 
 //                 ADD
 // unshift(); ----------------------- push();
@@ -146,7 +146,7 @@ console.log(numbers);
 //                  DELETE
 
 const exampleArray = [1, 1, 2, 3, 4, 4];
-console.table(exampleArray);
+// console.table(exampleArray);
 // const unshiftElem = exampleArray.unshift(0);
 // console.log(unshiftElem);
 // console.log(exampleArray);
@@ -173,7 +173,7 @@ const firstPiece = [1, 2];
 const secondPiece = [3, 4];
 // console.log(secondPiece);
 
-const thirdPiece = [5, 6] ;
+const thirdPiece = [5, 6];
 // console.log(thirdPiece);
 
 const fullArray = firstPiece.concat(secondPiece, thirdPiece);

@@ -1,4 +1,6 @@
-// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+console.log(friends.slice(0: 1, 3: 1));
+
 
 // / console.table(friends);
 // friends[1] = 'qweqwe';
@@ -179,7 +181,10 @@ const thirdPiece = [5, 6];
 const fullArray = firstPiece.concat(secondPiece, thirdPiece);
 // console.log(fullArray);
 
+// const clients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
 
+// Вернет новый массив в котором будут элементы с индексами от 1 до 2
+ // ["Ajax", "Poly"]
 
 
 

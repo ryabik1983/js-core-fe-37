@@ -99,12 +99,12 @@
 // myFunc(); Нельзя вызывать до обявления.
 
 const myFunc = function (param1, param2) {
-// console.log(`Это функциональное выражение с параметрами: ${param1}, ${param2}`,);
+    // console.log(`Это функциональное выражение с параметрами: ${param1}, ${param2}`,);
 }
 // // FUNCTION DECLARATION
 
 
-function myFuncDeclar(){
+function myFuncDeclar() {
     // console.log('Это декларативное обявление :');
 
 };
@@ -113,8 +113,8 @@ function myFuncDeclar(){
 
 const myArrowFunc = () => {
     // console.log('Это Стрелочная функция :');
-    
-    };
+
+};
 
 // Вызовы функций
 // myFunc('Hello!', 'Baby!');
@@ -132,27 +132,62 @@ const myArrowFunc = () => {
 // }
 // showInfo ('Alexandr', 31);
 
-function getResult (){
-console.log(arguments);
-for (let elem of arguments){
-    console.log(elem);
-}
-const myArg = Array.from (arguments);
-console.log(myArg);
-myArg.shift(1);
-console.log(myArg);
-}
-getResult(0, 1);
-// Преобразование псевдомасива в полноценный массив
-const getArrayResult = (...allParams) => {
-    // console.log(arguments);
-    console.log(allParams);
+// function getResult() {
+//     // console.log(arguments);
+//     for (let elem of arguments) {
+//         // console.log(elem);
+//     }
+//     const myArg = Array.from(arguments);
+//     // console.log(myArg);
+//     myArg.shift(1);
+//     // console.log(myArg);
+// }
+// getResult(0, 1);
+// // Преобразование псевдомасива в полноценный массив
+// const getArrayResult = (...allParams) => {
+//     // console.log(arguments);
+//     // console.log(allParams);
 
 
-}
-getArrayResult(1, 2, 3, 4, 5, 6);
+// }
+// getArrayResult(1, 2, 3, 4, 5, 6);
+
+// function getOddValues(array, value) {
+//     console.log(array);
+//     for (let i = 0; i < array.length; i += 1) {
+//         console.log(array[i]);
+//         if (array[i] === value) {
+//             return console.log(`Значение ${value} ecть в массиве`);
+//         }
+//         else {
+//             return {`Значение ${value} отсутствует в массиве`
+//         }
+//     }
+// }
+// }
+// getOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5);
+
+// function checkStorage(available, ordered) {
+//     // Change code below this line
+//     for (let i = 0; i < available.length; i += 1) {
+//         console.log(array[i]);
+//         if (array[i] === value) {
+//             return console.log(`Значение ${value} ecть в массиве`);
+//         }
+//         else {
+//             return {`Значение ${value} отсутствует в массиве`
+//         }
+
+//         if (ordered === 0) return "Your order is empty!";
+//         else if (ordered > available) return "Your order is too large, not enough goods in stock!"
+//         return "The order is accepted, our manager will contact you";
 
 
+
+
+
+//         // Change code above this line
+//     }
 
 
 

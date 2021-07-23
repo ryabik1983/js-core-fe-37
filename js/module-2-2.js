@@ -87,10 +87,75 @@
 //     // Change code above this line
 // }
 
-const findLogin = function (allLogins, loginToFind) {
-    console.log(allLogins);
+// const findLogin = function (allLogins, loginToFind) {
+//     console.log(allLogins);
+// }
+// console.log(findLogin(logins, 'sgfsgf'));
+// console.log(findLogin(logins, 'erteyy'));
+// console.log(findLogin(logins, 'jkljl'));
+// console.log(findLogin(logins, 'jkiop'));
+
+// FUNCTION EXPRESSION
+// myFunc(); Нельзя вызывать до обявления.
+
+const myFunc = function (param1, param2) {
+// console.log(`Это функциональное выражение с параметрами: ${param1}, ${param2}`,);
 }
-console.log(findLogin(logins, 'sgfsgf'));
-console.log(findLogin(logins, 'erteyy'));
-console.log(findLogin(logins, 'jkljl'));
-console.log(findLogin(logins, 'jkiop'));
+// // FUNCTION DECLARATION
+
+
+function myFuncDeclar(){
+    // console.log('Это декларативное обявление :');
+
+};
+
+// ARROW FUNCTION
+
+const myArrowFunc = () => {
+    // console.log('Это Стрелочная функция :');
+    
+    };
+
+// Вызовы функций
+// myFunc('Hello!', 'Baby!');
+// myFuncDeclar();
+// // myArrowFunc();
+// let user;
+// function  toSayHello (username = 'User') {
+//     alert (`${username}, рады вас приветствовать!`)
+// };
+
+// toSayHello ();
+
+// function showInfo (userName, userAge) {
+// console.log(`Hello, my name is ${userName}. I am ${userAge} years old.`);
+// }
+// showInfo ('Alexandr', 31);
+
+function getResult (){
+console.log(arguments);
+for (let elem of arguments){
+    console.log(elem);
+}
+const myArg = Array.from (arguments);
+console.log(myArg);
+myArg.shift(1);
+console.log(myArg);
+}
+getResult(0, 1);
+// Преобразование псевдомасива в полноценный массив
+const getArrayResult = (...allParams) => {
+    // console.log(arguments);
+    console.log(allParams);
+
+
+}
+getArrayResult(1, 2, 3, 4, 5, 6);
+
+
+
+
+
+
+
+

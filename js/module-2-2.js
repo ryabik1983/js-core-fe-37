@@ -1,4 +1,4 @@
-// const add = function (a, b) {
+// const add = function (a, b) { }
 //     console.log(a);
 //     console.log(b);
 //     console.log('Выполняется функция add!');
@@ -152,20 +152,19 @@ const myArrowFunc = () => {
 // }
 // getArrayResult(1, 2, 3, 4, 5, 6);
 
-// function getOddValues(array, value) {
-//     console.log(array);
-//     for (let i = 0; i < array.length; i += 1) {
-//         console.log(array[i]);
-//         if (array[i] === value) {
-//             return console.log(`Значение ${value} ecть в массиве`);
-//         }
-//         else {
-//             return {`Значение ${value} отсутствует в массиве`
-//         }
-//     }
-// }
-// }
-// getOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5);
+function getOddValues(array, value) {
+    console.log(array);
+    for (let i = 0; i < array.length; i += 1) {
+        console.log(array[i]);
+        if (array[i] === value) {
+            return console.log(`Значение ${value} ecть в массиве`);
+        }
+        else {
+            return (`Значение ${value} отсутствует в массиве`);
+        }
+    }
+}
+getOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5);
 
 // function checkStorage(available, ordered) {
 //     // Change code below this line
@@ -209,22 +208,93 @@ const myArrowFunc = () => {
 //     console.log(longestWord);
 // }
 
-function findLongestWord(string) {
-    // Change code below this line
-    let stringSplit = string.split(" ");
-    let longestWord = stringSplit[0];
-    for (const newWord of stringSplit) {
-        if (newWord >= longestWord) {
-            longestWord = newWord;
+// function findLongestWord(string) {
+//     // Change code below this line
+//     let stringSplit = string.split(" ");
+//     let longestWord = stringSplit[0];
+//     for (const newWord of stringSplit) {
+//         if (newWord >= longestWord) {
+//             longestWord = newWord;
 
+//         }
+//     }
+//     return longestWord;
+
+
+// let biggestNumber = 3;
+// let numbers = [1, 2, 3, 4, 5];
+// // Change code below this line
+// let biggestNumbers = [];
+// for (const number of numbers) {
+//     if (number > biggestNumber) {
+//         biggestNumbers.push(number);
+//         // break;
+//     }
+//     // console.log(numbers);
+
+//     // Change code above this line
+
+// }
+
+// // console.log(biggestNumbers);
+// let fruit = "pea";
+// const fruits = ["apple", "plum", "pear", "orange"];
+// if (fruits.includes(fruit)) {
+//     console.log("true");
+// }
+// else {
+//     console.log("false");
+// }
+
+// const start = 12;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//     if (i % 5 === 0) {
+//         number = i;
+//         break;
+
+//     }
+// }
+// console.log(number);
+
+function findNumber(start, end, divisor) {
+    // Change code below this line
+    let number;
+
+    for (let i = start; i < end; i += 1) {
+        if (i % divisor === 0) {
+            number = i;
+            break;
         }
     }
-    return longestWord;
 
-
-
+    return number;
     // Change code above this line
 }
+findNumber(2, 6, 5)
+
+let array = [2, 6, 5];
+let value = 7;
+// Change code below this line
+for (const item of array) {
+    if (item === value) {
+        console.log(true);
+        break;
+
+    }
+    else if (item !== value) {
+        console.log(false);
+    }
+
+
+}
+
+
+
+
+
 
 
 

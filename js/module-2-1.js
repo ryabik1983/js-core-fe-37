@@ -1,5 +1,5 @@
-const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
-console.log(friends.slice(0: 1, 3: 1));
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// console.log(friends.slice(0: 1, 3: 1));
 
 
 // / console.table(friends);

@@ -189,8 +189,42 @@ const myArrowFunc = () => {
 //         // Change code above this line
 //     }
 
+// 
 
 
+// const oder = [35, 17, 28, 24];
+// let total = 0;
+// for (const item of oder) {
+//     total += item;
+// }
+// console.log(total);
+
+// let string = "The quick brown fox jumped over the lazy dog";
+// let strSplit = string.split(" ");
+// let longestWord = 0;
+// for (let i = 0; i < strSplit.length; i += 1) {
+//     if (strSplit[i].length > longestWord) { // If strSplit[i].length больше, чем сравнимое слово...
+//         longestWord = strSplit[i].length; // ...затем longestWord принимает новое значение
+//     }
+//     console.log(longestWord);
+// }
+
+function findLongestWord(string) {
+    // Change code below this line
+    let stringSplit = string.split(" ");
+    let longestWord = stringSplit[0];
+    for (const newWord of stringSplit) {
+        if (newWord >= longestWord) {
+            longestWord = newWord;
+
+        }
+    }
+    return longestWord;
+
+
+
+    // Change code above this line
+}
 
 
 

@@ -223,15 +223,39 @@
 //     console.log(i);
 // }
 
-// const target = 5;
-// let sum = 0;
+const target = 24;
+let sum = 0;
 
-// for (let i = 0; i <= target; i += 1) {
-//     sum += i;
+for (let i = 0; i <= target; i += 1) {
+    sum += i;
+}
+
+console.log(sum);
+
+
+
+// Change code above this line
+// return total;
+
+
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// for (let i = 0; i < fruits.length; i += 1) {
+//     console.log(fruits[i]);
 // }
 
-// console.log(sum);
+// function calculateTotal(number) {
+//     // Change code below this line
+//     let sum;
 
+//     for (let i = 0; i <= number; i += 1) {
+//         sum += i;
+//     }
+//     console.log(sum);
+
+//     // Change code above this line
+// }
+// calculateTotal(3);
 // const max = 10;
 
 // for (let i = 0; i < max; i += 1) {

@@ -112,14 +112,62 @@ let totalFeedback = 0;
 // console.log(keys);
 
 // for (const key of keys) {
+//     console.log(key);
 //     console.log(feedback[key]);
+//     totalFeedback += feedback[key];
+    
 // }
-const values = Object.values(feedback);
-console.log(feedback);
-for (const value of values) {
-    console.log(value);
-    totalFeedback += value;
-}
-console.log(totalFeedback);
+// console.log('totalFeedback:', totalFeedback);
+// const values = Object.values(feedback);
+// console.log(feedback);
+// for (const value of values) {
+//     console.log(value);
+//     totalFeedback += value;
+// }
+// console.log('totalFeedback:', totalFeedback);
 
 // 
+// Массив обектов
+
+const friends = [
+    {name: 'Mango', online: false },
+    {name: 'Kiwi', online: true },
+    {name: 'Poly', online: true },
+    {name: 'Ajax', online: false },
+    {name: 'Kong', online: false },
+];
+// friends[1].newprop = 555;
+console.table(friends);
+
+// for (const friend of friends){
+//     console.log(friend);
+// friend.newprop = 555;
+
+// }
+// console.log(friends);
+
+const findFriendByName = function (allFriends, friendName){
+    for (const friend of allFriends){
+        // console.log(friend);
+        // console.log(friend.name);
+        if (friend.name === friendName){
+            return 'Нашли!!';
+        }
+        return 'NOT FINNED! :('
+    }
+    // console.log(allfriends.includes(name));
+
+}
+
+// console.log(findFriendByName(friends, 'Mango'));
+// console.log(findFriendByName(friends, 'Chelsy'));
+
+const getAllNames  = function(allFriends){
+const allNames = [];
+    for (const friend of allFriends){
+    console.log(friend.name);
+    allNames.push(friend.name);
+}
+return console.log(allNames);
+}
+getAllNames(friends);

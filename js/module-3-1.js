@@ -223,7 +223,29 @@ const getFriendsByOnlineStatus = function (allFriends) {
     return console.log(friendsByStatus);
 }
 
+console.log({});
+const obj = {
+prop_a: 'A',
+prop_b: 'B',
+prop_c: 2,
+prop_d: null,
+prop_e: true,
+name: 'Alex',
+age: 31,
+isOnline: false,
+isStudent: true,
+};
+console.log(obj);
 
+// console.log(obj.name);
+// console.log(obj['prop_b']);
 
+obj.age = 35;
 
+obj.languages = ['ukr', 'ru', 'en', 'bg'];
+console.log(obj.languages);
+
+// delete obj.age;
+let response = prompt('question')
+console.log(response);
 

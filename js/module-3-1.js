@@ -225,15 +225,15 @@ const getFriendsByOnlineStatus = function (allFriends) {
 
 console.log({});
 const obj = {
-prop_a: 'A',
-prop_b: 'B',
-prop_c: 2,
-prop_d: null,
-prop_e: true,
-name: 'Alex',
-age: 31,
-isOnline: false,
-isStudent: true,
+    prop_a: 'A',
+    prop_b: 'B',
+    prop_c: 2,
+    prop_d: null,
+    prop_e: true,
+    name: 'Alex',
+    age: 31,
+    isOnline: false,
+    isStudent: true,
 };
 console.log(obj);
 
@@ -246,6 +246,33 @@ obj.languages = ['ukr', 'ru', 'en', 'bg'];
 console.log(obj.languages);
 
 // delete obj.age;
-let response = prompt('question')
-console.log(response);
+// let response = prompt('question')
+// console.log(response);
 
+// const x = {
+//     a: 1,
+//     b: 2,
+//     c: 50,
+//     d: 100,
+// }
+// console.log(Object.keys(x).length);
+
+// const cart = {
+//     items: [],
+//     getItems() { },
+//     add(produck) { },
+//     remove(productName) { },
+//     clear() { },
+//     countTotalPrice() { },
+//     increaseQuantity() { },
+//     decreaseQuantity() { },
+// };
+// console.table(cart.getItems());
+
+let key1 = 'name';
+let key2 = 'lastName';
+let key3 = 'skills';
+const nextUser = {
+    [key1]: 'user',
+}
+console.log(nextUser);

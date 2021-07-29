@@ -61,43 +61,41 @@ fn.hello = '=)';
 // console.dir(fn);
 
 // МЕТОДЫ МАССИВА!
-const playlist = {
-    name: 'My super playlist',
-    rating: 5,
-    tracks: ['track-1', 'track-2', 'track-3', 'track-4'],
-    trackCount: 3,
-    // OLD SCHOOL!!
-    // getName: function (a){
-    //    console.log('Ага, это getName!', a);
+// const playlist = {
+//     name: 'My super playlist',
+//     rating: 5,
+//     tracks: ['track-1', 'track-2', 'track-3', 'track-4'],
+//     trackCount: 3,
+// OLD SCHOOL!!
+// getName: function (a){
+//    console.log('Ага, это getName!', a);
 
-    // },
-    // // New SCHOOL
-    // getName1 (){
-    //    console.log('Так стало getName!');
-    // }
-    changeName(newName) {
-        console.log('This inside changeName:', this);
-        this.name = newName;
-
-
-    },
-    addTrack(track) {
-        this.tracks.push(track);
-        this.trackCount = this.tracks.length;
-    },
-    updateRating(newRating) {
-        this.rating = newRating;
-    }
-}
+// },
+// // New SCHOOL
+// getName1 (){
+//    console.log('Так стало getName!');
+// }
+// changeName(newName) {
+//     console.log('This inside changeName:', this);
+//     this.name = newName;
+// };
+// addTrack(track) {
+//     this.tracks.push(track);
+//     this.trackCount = this.tracks.length;
+// },
+// updateRating(newRating) {
+//     this.rating = newRating;
+// }
+// }
 
 
 
 // playlist.getName(5);
 // playlist.getName1();
-playlist.changeName('Новое имя!');
-playlist.addTrack('Новый трек!');
-playlist.updateRating(10);
-console.log(playlist);
+// playlist.changeName('Новое имя!');
+// playlist.addTrack('Новый трек!');
+// playlist.updateRating(10);
+// console.log(playlist);
 
 // ПЕРЕБОР ОБЕКТА
 
@@ -275,7 +273,7 @@ let key3 = 'skills';
 const nextUser = {
     [key1]: 'user',
 }
-console.log(nextUser); 
+console.log(nextUser);
 
 // const numbers = [1, 2, 3].concat([4, 5, 6], [7, 8, 9]);
 const numbers = [0, 5, 10, ...[1, 2, 3, 1000, 500], 4, 5];
@@ -286,17 +284,27 @@ const temp = [18, 14, 12, 21, 17, 29, 24];
 console.log(Math.max(...temp));
 console.log(temp);
 
-const a = {x: 1, y: 2};
-const b = {x: 0, z: 3};
+const a = { x: 1, y: 2 };
+const b = { x: 0, z: 3 };
 
 // const c = Object.assign({}, a, b);
 // console.log(c);
 
 // console.log(...'qwe');
 
-const c = {
-    name: 'Mango',
-    ...a,
-    ...b,
-};
-console.log(c);
+// const c = {
+//     name: 'Mango',
+//     ...a,
+//     ...b,
+// };
+// console.log(c);
+const playlist = {
+    name: 'Super',
+    rating: 5,
+    tracks: ['track-1', 'track-2', 'track-3'],
+    trackCount: 3,
+}
+const { rating, tracks, name, track, author = 777 } = playlist;
+// console.log(name);
+console.log(author);
+console.log(tracks);

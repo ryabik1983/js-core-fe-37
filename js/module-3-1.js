@@ -48,9 +48,9 @@ colorPickerData.qwe = 8;
 // Ссылочный тип
 // console.log([] ===[]);
 
-const a = [1, 2, 3];
+// const a = [1, 2, 3];
 
-a.hello = 100;
+// a.hello = 100;
 
 // console.log(a);
 
@@ -275,4 +275,28 @@ let key3 = 'skills';
 const nextUser = {
     [key1]: 'user',
 }
-console.log(nextUser);
+console.log(nextUser); 
+
+// const numbers = [1, 2, 3].concat([4, 5, 6], [7, 8, 9]);
+const numbers = [0, 5, 10, ...[1, 2, 3, 1000, 500], 4, 5];
+
+console.log(numbers);
+const temp = [18, 14, 12, 21, 17, 29, 24];
+// console.log(Math.min(1, 2, 3, 4, 5, 6, 81));
+console.log(Math.max(...temp));
+console.log(temp);
+
+const a = {x: 1, y: 2};
+const b = {x: 0, z: 3};
+
+// const c = Object.assign({}, a, b);
+// console.log(c);
+
+// console.log(...'qwe');
+
+const c = {
+    name: 'Mango',
+    ...a,
+    ...b,
+};
+console.log(c);

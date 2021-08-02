@@ -684,42 +684,120 @@ let totalFeedback = 0;
 
 const atTheOldToad = {
     potions: [
-        { name: 'Speed potion', price: 460 },
-        { name: 'Dragon breath', price: 780 },
-        { name: 'Stone skin', price: 520 },
+      { name: 'Speed potion', price: 460 },
+      { name: 'Dragon breath', price: 780 },
+      { name: 'Stone skin', price: 520 },
     ],
     // Change code below this line
     getPotions() {
-        return this.potions;
+      return this.potions;
     },
     addPotion(potionName) {
-        if (this.potions.includes(potionName)) {
-            return `Potion ${potionName} is already equipped!`;
-        }
-
-        this.potions.push(potionName);
+      if (this.potions.includes(potionName)) {
+        return `Potion ${potionName} is already equipped!`;
+      }
+  
+      this.potions.push(potionName);
     },
-    atTheOldToad.addPotion('Speed potion');
-
     removePotion(potionName) {
+      
         const potionIndex = this.potions.indexOf(potionName);
+  
+      if (potionIndex === -1) {
+        return `Potion ${potionName} is not in inventory!`;
+      }
+  
+      this.potions.splice(potionIndex, 1);
 
-        if (potionIndex === -1) {
-            return `Potion ${potionName} is not in inventory!`;
+      removePotion(potionName) {
+        for (const potion of this.potions){
+        if (potion.name === potionName){
+        this.potions.splice(this.potions.indexOf(potion), 1);}
         }
-
-        this.potions.splice(potionIndex, 1);
     },
     updatePotionName(oldName, newName) {
-        const potionIndex = this.potions.indexOf(oldName);
-
-        if (potionIndex === -1) {
-            return `Potion ${oldName} is not in inventory!`;
-        }
-
-        this.potions.splice(potionIndex, 1, newName);
+      const potionIndex = this.potions.indexOf(oldName);
+  
+      if (potionIndex === -1) {
+        return `Potion ${oldName} is not in inventory!`;
+      }
+  
+      this.potions.splice(potionIndex, 1, newName);
+    },
+    countTotalPrice(){
+        const { potions } = this;
+        let total = 0;
+        for (const { price } of potions){
+            total += price;
+            
+        } 
+        return total;
+    },
+    clearPotionName(){
+        this.potions = [];
     },
     // Change code above this line
+    // console.log(potions).
+  };
+  
+//   console.log(atTheOldToad.potions);
+  
+console.log(atTheOldToad.addPotion('ganj'));
+console.log(atTheOldToad.removePotion('Dragon breath'));
+console.log(atTheOldToad.countTotalPrice());
 
-};
-console.table(atTheOldToad.potions);
+console.log(atTheOldToad.clearPotionName());
+
+
+  console.log(atTheOldToad.getPotions());
+
+
+// const rgb = [255, 100, 80];
+// let a, b, c, alfa;
+// [a, b, c, alfa = 50] = rgb;
+// console.log(a, b, c, alfa);
+// console.log(`red: ${a}, green: ${b}, blue: ${c}`);
+// const [aa, ...colors] = rgb;
+// console.log(aa, colors);
+// const [aaa, , ccc] = rgb;
+// console.log(aaa, ccc);
+// const authors = {
+//     kiwi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 6, 
+// };
+
+// const entries = Object.entries(authors);
+// for (const [name, rating] of entries){
+//     // console.log(entry);
+//     // const name = entry [0];
+//     // const rating = entry [1];
+//     // const  = entry;
+//     console.log(name, rating);
+
+// }
+// console.log(Math.max(...rating));
+// console.log(Math.min(...rating));
+// const showProfileInfo = function(userProfile){
+// console.log(userProfile);
+// };
+
+// const profile = {
+//     name: 'Jacues',
+//     tag: 'jgLuke',
+//     location: 'Jamaica',
+//     avatar: 'https',
+//     stats: {
+//         folowers: 5603,
+//         views: 4827,
+//         likes: 1308,
+//     },
+// };
+
+// showProfileInfo (profile);
+// const {name, tag, location, ...restProps} = profile;
+// console.log(name, tag, location);
+// console.log(restProps);
+
+

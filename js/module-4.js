@@ -26,18 +26,18 @@
 // doMath (2, 3, function (x, y){
 //     return x + y;
 // });
-// doMath (10, 8, sub);
-const onGetPositionSucces = function (position) {
-    console.log('Это вызов onGetPositionSucces');
-    console.log(position);
-};
-const onGetPositionError = function (error) {
-    console.log(error);
-};
-window.navigator.geolocation.getCurrentPosition(
-    onGetPositionSucces,
-    onGetPositionError
-);
+// // doMath (10, 8, sub);
+// const onGetPositionSucces = function (position) {
+//     console.log('Это вызов onGetPositionSucces');
+//     console.log(position);
+// };
+// const onGetPositionError = function (error) {
+//     console.log(error);
+// };
+// window.navigator.geolocation.getCurrentPosition(
+//     onGetPositionSucces,
+//     onGetPositionError
+// );
 // function highOrder(value, callback) {
 //     callback(value);
 // };
@@ -81,32 +81,74 @@ window.navigator.geolocation.getCurrentPosition(
 //     console.log(`Едим пиццу ${pizzaName}`);
 
 // });
+
+
 //              4
 const pizzaPalace = {
     pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
-    order(pizzaName) {
-        if (this.pizzas.includes(pizzaName)) {
-            function makePizza(pizzaName)
+    order(pizzaName, onSuccess, onError) {
+        if(this.pizzas.includes(pizzaName)){
+console.log(true);
+            makePizza(pizzaName);
         }
         else {
-            function onOrderError(error)
-        }
+            onOrderError(pizzaName);
+        };
     },
-};
-// Пиши код выше этой строки
+  };
+  // Пиши код выше этой строки
+  
+  // Колбэк для onSuccess
+  function makePizza(pizzaName) {
+    return console.log(`Ваш заказ принят. Готовим пиццу ${pizzaName}.`);
+  }
+  
+  // Колбэк для onError
+  function onOrderError(pizzaName) {
+    return console.log(`В ассортименте нет пиццы с названием ${pizzaName}.`);
+  
+  }
+  
+  // Вызовы метода с колбэками
+  pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+//   pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
+//   pizzaPalace.order('Биг майк', makePizza, onOrderError);
+//   pizzaPalace.order('Венская', makePizza, onOrderError);
+  
 
-// Колбэк для onSuccess
-function makePizza(pizzaName) {
-    return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
-}
 
-// Колбэк для onError
-function onOrderError(error) {
-    return `Ошибка! ${error}`;
-}
+// // Заиыкания
+// const fnA = function (parametr){
+//  const innerVariable = 'значение внутренней переменной функции fnA'   ;
+//  const innerFunction = function(){
+//     console.log(parametr); 
+//     console.log(innerVariable);
+//     console.log('Это вызов innerFunction');
+//  };
+//  return innerFunction;
+// };
+// const fnB = fnA(555);
 
-// Вызовы метода с колбэками
-pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
-pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
-pizzaPalace.order('Биг майк', makePizza, onOrderError);
-pizzaPalace.order('Венская', makePizza, onOrderError);
+// fnB ();
+
+// // console.log(fnB);
+
+// const makeDish = function (sheffname, dish){
+// console.log('${sheffname} makes ${dish}');
+// };
+
+// function processCall(recipient) {
+//     // Имитируем доступность абонента случайным числом
+//     const isRecipientAvailable = Math.random() > 0.5;
+  
+//     if (!isRecipientAvailable) {
+//       console.log(`Абонент ${recipient} недоступен, оставьте сообщение.`);
+//       // Логика активации автоответчика
+//     } else {
+//       console.log(`Соединяем с ${recipient}, ожидайте...`);
+//       // Логика принятия звонка
+//     }
+//   }
+  
+//   processCall('Манг');
+//   const isRecipientAvailable = 1;

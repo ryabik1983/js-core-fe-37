@@ -83,38 +83,38 @@
 // });
 
 
-//              4
-const pizzaPalace = {
-    pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
-    order(pizzaName, onSuccess, onError) {
-        if(this.pizzas.includes(pizzaName)){
-console.log(true);
-            makePizza(pizzaName);
-        }
-        else {
-            onOrderError(pizzaName);
-        };
-    },
-  };
-  // Пиши код выше этой строки
-  
-  // Колбэк для onSuccess
-  function makePizza(pizzaName) {
-    return console.log(`Ваш заказ принят. Готовим пиццу ${pizzaName}.`);
-  }
-  
-  // Колбэк для onError
-  function onOrderError(pizzaName) {
-    return console.log(`В ассортименте нет пиццы с названием ${pizzaName}.`);
-  
-  }
-  
-  // Вызовы метода с колбэками
-  pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+// //              4
+// const pizzaPalace = {
+//     pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//     order(pizzaName, onSuccess, onError) {
+//         if(this.pizzas.includes(pizzaName)){
+// console.log(true);
+//             makePizza(pizzaName);
+//         }
+//         else {
+//             onOrderError(pizzaName);
+//         };
+//     },
+//   };
+//   // Пиши код выше этой строки
+
+//   // Колбэк для onSuccess
+//   function makePizza(pizzaName) {
+//     return console.log(`Ваш заказ принят. Готовим пиццу ${pizzaName}.`);
+//   }
+
+//   // Колбэк для onError
+//   function onOrderError(pizzaName) {
+//     return console.log(`В ассортименте нет пиццы с названием ${pizzaName}.`);
+
+//   }
+
+//   // Вызовы метода с колбэками
+//   pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
 //   pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
 //   pizzaPalace.order('Биг майк', makePizza, onOrderError);
 //   pizzaPalace.order('Венская', makePizza, onOrderError);
-  
+
 
 
 // // Заиыкания
@@ -140,7 +140,7 @@ console.log(true);
 // function processCall(recipient) {
 //     // Имитируем доступность абонента случайным числом
 //     const isRecipientAvailable = Math.random() > 0.5;
-  
+
 //     if (!isRecipientAvailable) {
 //       console.log(`Абонент ${recipient} недоступен, оставьте сообщение.`);
 //       // Логика активации автоответчика
@@ -149,6 +149,21 @@ console.log(true);
 //       // Логика принятия звонка
 //     }
 //   }
-  
+
 //   processCall('Манг');
 //   const isRecipientAvailable = 1;
+function todoMeal(prods, zzz) {
+  // console.log(prods);
+  let result = zzz(prods);
+  console.log(result);
+  // console.log(`Your dish -`);
+
+}
+todoMeal(['bread', 'meat'], todoSandwich);
+todoMeal(['banana', 'meat'], todoSandwich);
+
+function todoSandwich(arr) {
+  // console.log(arr);
+  let bread = arr.includes('bread')
+  return bread ? 'sandwich is done!' : 'no bread'
+};

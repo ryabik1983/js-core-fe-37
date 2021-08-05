@@ -214,12 +214,12 @@
 
 //     if (!isPizzaAvailable) {
 //       return console.log(`В ассортименте нет пиццы с названием «${pizzaName}».`);
-      
-      
+
+
 //     }
 
 //     return console.log(`Заказ принят, готовим пиццу «${pizzaName}».`);
-     
+
 //   },
 //   // Пиши код выше этой строки
 // };
@@ -227,19 +227,64 @@
 // pizzaPalace.order('льтрасыр');
 
 //  Числа Фибоначчи
-let firstNum = 10000;
-const toGetFibonacci = (count, cb)=> {
+// let firstNum = 10000;
+const toGetFibonacci = (count, cb) => {
   let firstNum = 0;
   let secondNum = 1;
   const arrayWithValues = [firstNum, secondNum];
   // cb(count);
   console.log(arrayWithValues);
-  for(let i = 1; i <= count; i += 1){
+  for (let i = 3; i <= count; i += 1) {
     let newNumber = firstNum + secondNum;
-    console.log(newNumber);
-  }
-  // console.log(firstNum);
-  return toGetFibonacci();
+    arrayWithValues.push(newNumber);
+    firstNum = secondNum;
+    secondNum = newNumber;
+    console.log(`newNumber: ${newNumber}`);
+
   };
-  toGetFibonacci(8);
-  console.log(firstNum);
+  console.log(arrayWithValues);
+  // // console.log(firstNum);
+  // return toGetFibonacci();
+};
+toGetFibonacci(18);
+// console.log(firstNum);
+
+
+
+
+
+
+//      6
+// const customer = {
+//   username: 'Mango',
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ['Burger', 'Pizza', 'Salad'],
+//   // Пиши код ниже этой строки
+//   getBalance() {
+//     return this.balance;
+
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Пиши код выше этой строки
+// };
+
+// customer.getBalance();
+// console.log(customer.setDiscount(0.15));
+
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, 'Steak');
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']

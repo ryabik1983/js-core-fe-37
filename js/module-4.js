@@ -152,18 +152,94 @@
 
 //   processCall('Манг');
 //   const isRecipientAvailable = 1;
-function todoMeal(prods, zzz) {
-  // console.log(prods);
-  let result = zzz(prods);
-  console.log(result);
-  // console.log(`Your dish -`);
+// function todoMeal(prods, zzz) {
+//   // console.log(prods);
+//   let result = zzz(prods);
+//   console.log(result);
+//   // console.log(`Your dish -`);
 
-}
-todoMeal(['bread', 'meat'], todoSandwich);
-todoMeal(['banana', 'meat'], todoSandwich);
+// }
+// todoMeal(['bread', 'meat'], todoSandwich);
+// todoMeal(['banana', 'meat'], todoSandwich);
 
-function todoSandwich(arr) {
-  // console.log(arr);
-  let bread = arr.includes('bread')
-  return bread ? 'sandwich is done!' : 'no bread'
-};
+// function todoSandwich(arr) {
+//   // console.log(arr);
+//   let bread = arr.includes('bread')
+//   return bread ? 'sandwich is done!' : 'no bread'
+// };
+// const results = [{mail: '', scores: 10}];
+// function getResultByTest (getMax, getMin, mail, ...scores){
+//   console.log(mail);
+//   console.log(scores);
+//   let total = 0;
+//   for (const score of scores){
+//     total += score;
+//   }
+//   console.log(total);
+//   const obj = {mail, scores: total};
+//   results.push(obj);
+//   console.log(results);
+//   // Перебираем массив результатов
+//   const scoresArray = [];
+//   for (let obj of results){
+//     console.log(obj.scores);
+//     scoresArray.push(obj.scores);
+//   };
+//   console.log(scoresArray);
+//   let max = getMax(scoresArray);
+//   let min = getMin(scoresArray);
+//   console.log('max:', max);
+//   console.log('min:', min);
+
+
+//   };
+// getResultByTest(getMaxValue, getMinValue, 'a@hotmail.com', 1, 1, 1, 1, 1)
+// getResultByTest(getMaxValue, getMinValue, 'a@hotmail.com', 1, 0, 1, 0, 1)
+// function getMaxValue(arr){
+//   return Math.max(...arr);
+// };
+// function getMinValue(arr){
+//   return Math.min(...arr);
+// };
+
+//      5
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   // Пиши код ниже этой строки
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return console.log(`В ассортименте нет пиццы с названием «${pizzaName}».`);
+      
+      
+//     }
+
+//     return console.log(`Заказ принят, готовим пиццу «${pizzaName}».`);
+     
+//   },
+//   // Пиши код выше этой строки
+// };
+// pizzaPalace.order('Ультрасыр');
+// pizzaPalace.order('льтрасыр');
+
+//  Числа Фибоначчи
+let firstNum = 10000;
+const toGetFibonacci = (count, cb)=> {
+  let firstNum = 0;
+  let secondNum = 1;
+  const arrayWithValues = [firstNum, secondNum];
+  // cb(count);
+  console.log(arrayWithValues);
+  for(let i = 1; i <= count; i += 1){
+    let newNumber = firstNum + secondNum;
+    console.log(newNumber);
+  }
+  // console.log(firstNum);
+  return toGetFibonacci();
+  };
+  toGetFibonacci(8);
+  console.log(firstNum);

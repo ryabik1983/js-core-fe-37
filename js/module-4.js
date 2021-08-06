@@ -228,26 +228,46 @@
 
 //  Числа Фибоначчи
 // let firstNum = 10000;
-const toGetFibonacci = (count, cb) => {
-  let firstNum = 0;
-  let secondNum = 1;
-  const arrayWithValues = [firstNum, secondNum];
-  // cb(count);
-  console.log(arrayWithValues);
-  for (let i = 3; i <= count; i += 1) {
-    let newNumber = firstNum + secondNum;
-    arrayWithValues.push(newNumber);
-    firstNum = secondNum;
-    secondNum = newNumber;
-    console.log(`newNumber: ${newNumber}`);
+// const toGetFibonacci = (count, cb) => {
+//   let firstNum = 0;
+//   let secondNum = 1;
+//   const arrayWithValues = [firstNum, secondNum];
+//   // cb(count);
+//   // console.log(arrayWithValues);
+//   for (let i = 3; i <= count; i += 1) {
+//     let newNumber = firstNum + secondNum;
+//     arrayWithValues.push(newNumber);
+//     // console.log(`newNumber: ${newNumber}`);
+//     firstNum = secondNum;
+//     secondNum = newNumber;
+//   };
+//   console.log(arrayWithValues);
+//   let result = cb(arrayWithValues);
+//   return result;
 
-  };
-  console.log(arrayWithValues);
-  // // console.log(firstNum);
-  // return toGetFibonacci();
-};
-toGetFibonacci(18);
-// console.log(firstNum);
+//   // // console.log(firstNum);
+//   // return toGetFibonacci();
+// };
+// console.log('Только четные:', toGetFibonacci(18, getEvenValues));
+// console.log('Сумма всех:', toGetFibonacci(7, getSum)); 
+// // console.log(firstNum);
+// function getEvenValues(arr){
+//   const arrValues = [];
+// for (let num of arr){
+//   if (num % 2 === 0) {
+//     arrValues.push(num);
+//   }
+// }
+// return arrValues;
+// };
+// function getSum(arr){
+// let total = 0;
+// for (let j of arr) {
+//   total += j;
+// }
+// return total;
+// };
+
 
 
 
@@ -288,3 +308,56 @@ toGetFibonacci(18);
 // customer.addOrder(5000, 'Steak');
 // console.log(customer.getBalance()); // 19750
 // console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']
+// first();
+// function first(){
+//   console.log(`this is 1 function STARTED`);
+//   second ();
+//   console.log(`this is 1 function FINISHED`);
+// };
+
+// function second(){
+//   console.log(`this is 2 function STARTED`);
+//   third ();
+//   console.log(`this is 2 function FINISHED`);
+// };
+
+// function third(){
+//   console.log(`this is 3 function STARTED`);
+//   fourth ();
+//   console.log(`this is 3 function FINISHED`);
+// };
+
+// function fourth(){
+//   console.log(`this is 4 function STARTED`);
+//   fifth ();
+//   console.log(`this is 4 function FINISHED`);
+// };
+
+// function fifth(){
+//   console.log(`this is 5 function STARTED`);
+//   sixth ();
+//   console.log(`this is 5 function FINISHED`);
+// };
+// function sixth(){
+//   console.log(`this is 6 function STARTED`);
+//   console.log(`this is 6 function FINISHED`);
+// };
+
+
+const productCounter = createCounter();
+document.getElementById('count').textContent = productCounter.current;
+console.log(productCounter);
+
+function createCounter(){
+  let current = 0;
+  function increment (value){
+    return (current += value)
+  };
+  function decrement(value){
+    if (current <= 0) return;
+    return (current -= value);
+
+  };
+  return { increment, decrement };
+}
+export default createCounter;

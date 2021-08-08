@@ -344,20 +344,151 @@
 // };
 
 
-const productCounter = createCounter();
-document.getElementById('count').textContent = productCounter.current;
-console.log(productCounter);
+// const productCounter = createCounter();
+// document.getElementById('count').textContent = productCounter.current;
+// console.log(productCounter);
 
-function createCounter(){
-  let current = 0;
-  function increment (value){
-    return (current += value)
-  };
-  function decrement(value){
-    if (current <= 0) return;
-    return (current -= value);
+// function createCounter() {
+//   let current = 0;
+//   function increment(value) {
+//     return (current += value)
+//   };
+//   function decrement(value) {
+//     if (current <= 0) return;
+//     return (current -= value);
 
-  };
-  return { increment, decrement };
-}
-export default createCounter;
+//   };
+//   return { increment, decrement };
+// }
+// export default createCounter;
+
+// const orders = [
+//   { email: 'solomon@topmail.ua', dish: 'Burger' },
+//   { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//   { email: 'jacob@mail.com', dish: 'Taco' },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`
+// }
+
+// const messages = [];
+// for (let i = 0; i < orders.length; i += 1) {
+//   messages.push(composeMessage.call(orders[i], i + 1))
+// }
+// console.log(messages);
+
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username}.`);
+// }
+
+// const mango = { username: "Манго" };
+// const poly = { username: "Поли" };
+
+
+// greetGuest.apply(mango, ["С приездом"]);
+// greetGuest.apply(poly, ["С приездом"]); // С приездом, Поли.
+//      8
+
+// const orders = [
+//   { email: "solomon@topmail.ua", dish: "Burger" },
+//   { email: "artemis@coldmail.net", dish: "Pizza" },
+//   { email: "jacob@mail.com", dish: "Taco" },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = [];
+// for (let i = 0; i < orders.length; i++) {
+//   const msg = composeMessage.apply([orders[i], i + 1]);
+//   messages.push(msg);
+
+// }
+// console.log(messages);
+
+//      10
+// const service = {
+//   mailingList: ['mango@mail.com', 'poly@hotmail.de', 'ajax@jmail.net'],
+//   subscribe(email) {
+//     this.mailingList.push(email);
+//     return `Почта ${email} добавлена в рассылку.`;
+//   },
+//   unsubscribe(email) {
+//     this.mailingList = this.mailingList.filter((e) => e !== email);
+//     return `Почта ${email} удалена из рассылки.`;
+//   },
+// };
+
+// function logAndInvokeAction(email, action) {
+//   console.log(`Выполняем действие с ${email}.`);
+//   return action(email);
+// }
+
+// const firstInvoke = logAndInvokeAction('kiwi@mail.uk', service.subscribe.bind(service));
+// console.log(firstInvoke);
+// // Почта kiwi@mail.uk добавлена в рассылку.
+
+// console.log(service.mailingList);
+// /* ['mango@mail.com', 
+//     'poly@hotmail.de', 
+//     'ajax@jmail.net', 
+//     'kiwi@mail.uk']*/
+// const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
+// console.log(secondInvoke);
+// // Почта poly@hotmail.de удалена из рассылки.
+
+// console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
+// let userMinutes = prompt('Введите количество минут, которые нужно преобразить в формат "часы:минуты"');
+// let hours = Math.floor(userMinutes / 60);
+// console.log(hours);
+// let minutes = userMinutes - hours * 60;
+// // s = hours < 10 ? 0${ hours } : ${ hours };
+// // s += minutes < 10 ? : 0${ minutes } : : ${ minutes };
+// alert(${ userMinutes } минут в формате "часы:минуты" это - ${ s });
+// const user = {
+//   tag: "Mango",
+//   showTag() {
+//     console.log('showTag -> this', this);
+//   },
+// };
+// user.showTag();
+
+// const foo = function () {
+//   console.log('foo -> this', this);
+// };
+// foo();
+
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log('showTag -> this', this);
+//     console.log('showTag -> this.tag', this.tag);
+//   },
+// };
+
+
+
+// const invokeAktion = function (action) {
+//   console.log(action);
+//   action();
+// };
+// invokeAktion(user.showTag);
+
+// user.showTag();
+// const outerShowTag = user.showTag;
+// outerShowTag();
+// console.log('user', user);
+// showUserTag();
+// user.showUserTag();
+// const showThis = function () {
+//   console.log('showThis -> this', this);
+// };
+// console.dir(showThis);
+
+console.log(document);
+const inc = document.querySelector('.js-inc');
+console.log(inc);

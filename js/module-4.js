@@ -489,6 +489,6 @@
 // };
 // console.dir(showThis);
 
-console.log(document);
-const inc = document.querySelector('.js-inc');
-console.log(inc);
+// console.log(document);
+// const inc = document.querySelector('.js-inc');
+// console.log(inc);

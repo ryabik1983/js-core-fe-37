@@ -16,11 +16,65 @@
 //  console.log(objA.z);
 //  console.log(objA);
 
-const objF = {
-    message: 'own property',};
-    console.log(objF.message);
+// const objF = {
+//     message: 'own property',};
+//     console.log(objF.message);
 
-    const objJ = Object.create(objF);
-    objJ.message = 'prototype property';
+//     const objJ = Object.create(objF);
+//     objJ.message = 'prototype property';
 
-    console.log(objJ);
+//     console.log(objJ);
+
+const Car = function ({ brand, model, price } = {}) {
+    // console.log(config);
+    // const  = cofig;
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+    // this.changePrice = function (newPrice) {
+    //     this.price = newPrice;
+    // };
+    // this.a = value;
+};
+
+Car.prototype.sayHi = function () {
+    console.log('Car.prototype.sayHi -> this', this);
+    console.log('Hello');
+};
+Car.prototype.changePrice = function (newPrice) {
+    this.price = newPrice;
+}
+console.log(Car.prototype);
+
+const myCar = new Car({ brand: 'Audi', model: 'Q3', price: 35000 });
+
+myCar.sayHi();
+myCar.changePrice(30000);
+// const = {
+console.log(myCar);
+
+// 'Audi', 'Q3', 35000
+
+const myCar2 = new Car({ brand: 'BMW', model: 'X6', price: 45000 });
+
+myCar2.sayHi();
+console.log(myCar2);
+
+const myCar3 = new Car({ brand: 'AUDI', model: 'A6', price: 65000 });
+console.log(myCar3);
+myCar3.sayHi();
+
+
+const User = function ({ email, password } = {}) {
+    this.email = email;
+    this.password = password;
+};
+const mango = new User({ email: 'mangomail.com', password: 1111 });
+console.log(User);
+console.log(mango);
+
+User.prototype.changeEmail = function (newEmail) {
+    this.email = newEmail;
+    console.log(User);
+};
+User.changeEmail();

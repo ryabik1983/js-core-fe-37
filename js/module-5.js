@@ -91,13 +91,13 @@
 // };
 // Storage.prototype.addItem = function (newItem){
 //      this.items.push(newItem);
-    
+
 // };
 // Storage.prototype.removeItem = function (newItem){
 //     this.items.splice(this.items.indexOf(newItem), 1);
 
 // };
-  
+
 // // Пиши код выше этой строки
 // const storage = new Storage(["Нанитоиды", "Пролонгер", "Антигравитатор"]);
 // console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
@@ -120,22 +120,23 @@
 
 //          7
 
-function StringBuilder(baseValue){
-   this.baseValue;
+function StringBuilder(baseValue) {
+    this.baseValue = baseValue;
 };
 
-StringBuilder.prototype.getValue = function (){
+StringBuilder.prototype.getValue = function () {
     return this.value;
     console.log(this.value);
-}    
-    
-    // Пиши код выше этой строки
-    const builder = new StringBuilder('.');
-    console.log(builder.getValue()); // '.'
-    // builder.padStart('^');
-    // console.log(builder.getValue()); // '^.'
-    // builder.padEnd('^');
-    // console.log(builder.getValue()); // '^.^'
-    // builder.padBoth('=');
-    // console.log(builder.getValue()); // '=^.^='
+}
 
+// Пиши код выше этой строки
+const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // '.'
+// builder.padStart('^');
+// console.log(builder.getValue()); // '^.'
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // '=^.^='
+
+console.log(Math.PI);

@@ -25,44 +25,6 @@
 
 //     console.log(objJ);
 
-// const Car = function ({ brand, model, price } = {}) {
-//     // console.log(config);
-//     // const  = cofig;
-//     this.brand = brand;
-//     this.model = model;
-//     this.price = price;
-//     // this.changePrice = function (newPrice) {
-//     //     this.price = newPrice;
-//     // };
-//     // this.a = value;
-// };
-
-// Car.prototype.sayHi = function () {
-//     console.log('Car.prototype.sayHi -> this', this);
-//     console.log('Hello');
-// };
-// Car.prototype.changePrice = function (newPrice) {
-//     this.price = newPrice;
-// }
-// console.log(Car.prototype);
-
-// const myCar = new Car({ brand: 'Audi', model: 'Q3', price: 35000 });
-
-// myCar.sayHi();
-// myCar.changePrice(30000);
-// // const = {
-// console.log(myCar);
-
-// // 'Audi', 'Q3', 35000
-
-// const myCar2 = new Car({ brand: 'BMW', model: 'X6', price: 45000 });
-
-// myCar2.sayHi();
-// console.log(myCar2);
-
-// const myCar3 = new Car({ brand: 'AUDI', model: 'A6', price: 65000 });
-// console.log(myCar3);
-// myCar3.sayHi();
 
 
 // const User = function ({ email, password } = {}) {
@@ -120,37 +82,121 @@
 
 //          7
 
-function StringBuilder(baseValue) {
-    this.value = baseValue;
+// function StringBuilder(baseValue) {
+//     this.value = baseValue;
+//     console.log(this);
 
-};
-StringBuilder.prototype.getValue = function (value) {
-    return this.value;
-};
+// };
+// StringBuilder.prototype.getValue = function (value) {
+//     return this.value;
+// };
 
-StringBuilder.prototype.padEnd = function (str) {
-    this.value = this.value + str;
-};
-StringBuilder.prototype.padStart = function (str) {
-    this.value = str + this.value;
-};
-StringBuilder.prototype.padBoth = function (str) {
-    this.value = str + this.value + str;
-};
-
-
-// Пиши код выше этой строки
-const builder = new StringBuilder('.');
-console.log(builder);
-console.log(builder.getValue()); // '.'
-// console.log(StringBuilder.prototype.hasOwnProperty('getValue'));
+// StringBuilder.prototype.padEnd = function (str) {
+//     this.value = this.value + str;
+// };
+// StringBuilder.prototype.padStart = function (str) {
+//     this.value = str + this.value;
+// };
+// StringBuilder.prototype.padBoth = function (str) {
+//     this.value = str + this.value + str;
+// };
 
 
-builder.padStart('^');
-console.log(builder.getValue()); // '^.'
-builder.padEnd('^');
-console.log(builder.getValue()); // '^.^'
-builder.padBoth('=');
-console.log(builder.getValue()); // '=^.^='
+// // Пиши код выше этой строки
+// const builder = new StringBuilder('.');
+// console.log(builder);
+// console.log(builder.getValue()); // '.'
+// // console.log(StringBuilder.prototype.hasOwnProperty('getValue'));
 
-console.log(Math.PI);
+
+// builder.padStart('^');
+// console.log(builder.getValue()); // '^.'
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // '=^.^='
+
+// console.log(Math.PI);
+
+
+
+
+
+// const Car = function ({ brand, model, price } = {}) {
+//     // console.log(config);
+//     // const  = cofig;
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//     // this.changePrice = function (newPrice) {
+//     //     this.price = newPrice;
+//     // };
+//     // this.a = value;
+// };
+
+// Car.prototype.sayHi = function () {
+//     console.log('Car.prototype.sayHi -> this', this);
+//     console.log('Hello');
+// };
+// Car.prototype.changePrice = function (newPrice) {
+//     this.price = newPrice;
+// }
+// console.log(Car.prototype);
+
+// const myCar = new Car({ brand: 'Audi', model: 'Q3', price: 35000 });
+
+// myCar.sayHi();
+// myCar.changePrice(30000);
+// // const = {
+// console.log(myCar);
+
+// // 'Audi', 'Q3', 35000
+
+// const myCar2 = new Car({ brand: 'BMW', model: 'X6', price: 45000 });
+
+// myCar2.sayHi();
+// console.log(myCar2);
+
+// const myCar3 = new Car({ brand: 'AUDI', model: 'A6', price: 65000 });
+// console.log(myCar3);
+// myCar3.sayHi();
+// class myCar1 {
+//     constructor({ brand, model, price } = {}) {
+//         console.log('Performed constructor');
+//         console.log(this);
+//         this.a = 5;
+//         this.b = 10;
+//     }
+// };
+// console.log(myCar1);
+// const carInstance = new myCar1();
+// console.log(carInstance);
+
+
+// class Car {
+//     constructor() {
+
+//     };
+
+// };
+// console.dir(Car);
+
+
+//          9
+class Car {
+    static description = 'AAA';
+    static logInfo(carObj) {
+        console.log(carObj);
+    };
+
+    constructor({ brand, model, price }) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
+}
+
+// console.log(Car);
+// console.log(Car.description);
+Car.logInfo(carObj)
+

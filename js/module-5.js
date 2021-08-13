@@ -217,7 +217,7 @@
 //       this.#items.splice(itemIndex, 1);
 //     }
 //     }
-    
+
 //     // Пиши код выше этой строки
 //     const storage = new Storage(["Нанитоиды", "Пролонгер", "Антигравитатор"]);
 //     console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
@@ -248,7 +248,7 @@
 //   }
 
 // }
-  
+
 //   // Пиши код выше этой строки
 //   const builder = new StringBuilder('.');
 //   console.log(builder.getValue()); // '.'
@@ -264,19 +264,19 @@
 //     #brand;
 //     #model;
 //     #price;
-    
-  
+
+
 //     constructor ({brand, model, price}) {
 //     this.#brand = brand;
 //     this.#model = model;
 //     this.#price = price;
-      
+
 //     }
-  
+
 //     get brand() {
 //       return this.#brand;
 //     }
-  
+
 //     set brand(newBrand) {
 //       this.#brand = newBrand;
 //     }
@@ -284,15 +284,15 @@
 //     get model() {
 //         return this.#model;
 //       }
-    
+
 //     set model(newModel) {
 //         this.#model = newModel;
 //       }
-    
+
 //     get price() {
 //         return this.#price;
 //       }
-    
+
 //     set price(newPrice) {
 //         this.#price = newPrice;
 //       }
@@ -302,3 +302,60 @@
 // car.brand = 'BMW';
 // console.log(car.brand);
 
+//          15
+
+// class Car {
+//     // Пиши код ниже этой строки
+//     static MAX_PRICE = 50000;
+//     #price;
+
+//     constructor({ price }) {
+//         this.#price = price;
+//     }
+
+//     get price() {
+//         return this.#price;
+//     }
+
+//     set price(newPrice) {
+//         if (newPrice <= Car.MAX_PRICE) {
+//             this.#price = newPrice;
+//         }
+//         return;
+//     }
+//     // Пиши код выше этой строки
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 50000;
+// console.log(audi.price); // 49000
+
+//          16
+// class Car {
+//     static #MAX_PRICE = 50000;
+//     // Пиши код ниже этой строки
+//     static checkPrice(price) {
+//         if (price <= Car.#MAX_PRICE) {
+//             return 'Всё хорошо, цена в порядке.'
+//         };
+//         return 'Внимание! Цена превышает допустимую.'
+//     };
+
+//     // Пиши код выше этой строки
+//     constructor({ price }) {
+//         this.price = price;
+//     }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // Всё хорошо, цена в порядке.
+// console.log(Car.checkPrice(bmw.price)); // Внимание! Цена превышает допустимую.
+
+//          17

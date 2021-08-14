@@ -359,3 +359,149 @@
 // console.log(Car.checkPrice(bmw.price)); // Внимание! Цена превышает допустимую.
 
 //          17
+
+// class User {
+//     email;
+
+//     constructor(email) {
+//         this.email = email;
+//     }
+
+//     get email() {
+//         return this.email;
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail;
+//     }
+// }
+// // Пиши код ниже этой строки
+// class Admin extends User {
+//     static AccessLevel = { BASIC: 'basic', SUPERUSER: 'superuser' };
+//     constructor(AccessLevel) {
+//         super();
+
+//         this.AccessLevel = AccessLevel;
+//         // this.SUPERUSER = SUPERUSER;
+//     }
+
+// }
+// User.email = 'Polymail@com';
+// console.log(User.email);
+// console.log(Admin.email);
+// const mango = new Admin();
+
+// // console.log(mango);
+// console.log(Admin.AccessLevel.BASIC);
+// console.log(Admin.AccessLevel.SUPERUSER);
+// // console.log(AccessLevel.SUPERUSER);
+// // console.log(user.email);
+// // console.log(object);
+
+//          18
+// class User {
+//     email;
+
+//     constructor(email) {
+//         this.email = email;
+//     }
+
+//     get email() {
+//         return this.email;
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail;
+//     }
+// }
+
+// class Admin extends User {
+//     // Пиши код ниже этой строки
+
+//     static AccessLevel = { BASIC: 'basic', SUPERUSER: 'superuser' };
+//     accessLevel;
+//     constructor({ email, accessLevel }) {
+//         super(email, accessLevel);
+//         this.accessLevel = accessLevel;
+
+//     }
+
+//     // Пиши код выше этой строки
+// }
+
+// const mango = new Admin({
+//     email: 'mango@mail.com',
+//     accessLevel: Admin.AccessLevel.SUPERUSER
+// });
+
+// console.log(mango.email); // mango@mail.com
+// console.log(mango.accessLevel); // superuser
+
+//          19
+// class User {
+//     email;
+
+//     constructor(email) {
+//         this.email = email;
+//     }
+
+//     get email() {
+//         return this.email;
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail;
+//     }
+// }
+// class Admin extends User {
+//     // Пиши код ниже этой строки
+
+//     static AccessLevel = {
+//         BASIC: 'basic',
+//         SUPERUSER: 'superuser'
+//     };
+
+//     accessLevel;
+//     blacklistedEmails;
+
+//     constructor({ email, accessLevel, blacklistedEmails = [] }) {
+//         super(email);
+//         this.accessLevel = accessLevel;
+//         this.blacklistedEmails = blacklistedEmails;
+
+
+//     };
+//     blacklist(email) {
+//         this.blacklistedEmails.push(email);
+//     }
+
+
+//     isBlacklisted(email) {
+//         if (this.blacklistedEmails.includes(email)) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+
+//     }
+
+
+
+
+
+//     // Пиши код выше этой строки
+
+// }
+
+// const mango = new Admin({
+//     email: 'mango@mail.com',
+//     accessLevel: Admin.AccessLevel.SUPERUSER
+// });
+
+// //     console.log(mango.email); // mango@mail.com
+// //     console.log(mango.accessLevel); // superuser
+// mango.blacklist('poly@mail.com');
+// console.log(mango.blacklistedEmails); // 'poly@mail.com'
+// console.log(mango.isBlacklisted('mango@mail.com')); //  false
+// console.log(mango.isBlacklisted('poly@mail.com')); // true

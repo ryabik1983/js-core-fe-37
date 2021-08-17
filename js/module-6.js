@@ -52,5 +52,57 @@
 // const userId = users.map(user => user.id);
 // console.log(userId);
 
+//          3
+function getCommonElements(firstArray, secondArray) {
+    const commonElements = [];
+    // Пиши код ниже этой строки
+    firstArray.forEach((element) => {
+        if (secondArray.includes(element)) {
+            commonElements.push(element);
+        };
+    });
 
+    console.log(commonElements);
 
+    // Пиши код выше этой строки
+}
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([1, 2, 3], [2, 1, 17, 19])
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])
+
+//          6
+// const numbers = [5, 10, 15, 20, 25];
+// function calculateTotalPrice(orderedItems) {
+//     let totalPrice = 0;
+
+//     orderedItems.forEach(function (item) {
+//         totalPrice += item;
+//     });
+
+//     console.log(totalPrice);
+// }
+// calculateTotalPrice(numbers);
+
+//          7
+// const filterArray = (numbers, value) => {
+//     const filteredNumbers = [];
+
+//     numbers.forEach((number) => {
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     });
+
+//     // Пиши код выше этой строки
+//     console.log(filteredNumbers);
+//     // return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3)
+const numbers = [5, 10, 15, 20, 25];
+const total = numbers.reduce((acc, value) => {
+    console.log('number', value);
+    console.log('total', acc);
+    return acc + value;
+}, 0);
+console.log(total);

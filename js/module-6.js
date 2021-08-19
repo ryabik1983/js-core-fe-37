@@ -202,5 +202,9 @@ const books = [
 ];
 // Пиши код ниже этой строки
 
-const genres = books.flatMap(book => book.genres);
-console.log(genres);
+// const genres = books.flatMap(book => book.genres);
+// console.log(genres);
+const allGenres = books.reduce((genres, book) => [...genres, ...book.genres], []);
+
+console.log(allGenres);
+

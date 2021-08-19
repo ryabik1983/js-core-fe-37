@@ -183,28 +183,124 @@
 // console.log(titles);
 //          12
 
-const books = [
+// const books = [
+//     {
+//         title: 'Последнее королевство',
+//         author: 'Бернард Корнуэлл',
+//         genres: ['приключения', 'историческое']
+//     },
+//     {
+//         title: 'На берегу спокойных вод',
+//         author: 'Роберт Шекли',
+//         genres: ['фантастика']
+//     },
+//     {
+//         title: 'Красна как кровь',
+//         author: 'Ли Танит',
+//         genres: ['ужасы', 'мистика']
+//     }
+// ];
+// // Пиши код ниже этой строки
+
+// // const genres = books.flatMap(book => book.genres);
+// // console.log(genres);
+// const allGenres = books.reduce((genres, book) => [...genres, ...book.genres], []);
+
+// console.log(allGenres);
+//          13
+//          14
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Пиши код ниже этой строки
+
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+//          21
+
+// const allCourses = students.flatMap(student => student.courses);
+// const uniqueCourses = allCourses.filter(
+//     (course, index, array) => array.indexOf(course) === index
+// );
+const users = [
     {
-        title: 'Последнее королевство',
-        author: 'Бернард Корнуэлл',
-        genres: ['приключения', 'историческое']
+        name: 'Moore Hensley',
+        email: 'moorehensley@indexia.com',
+        eyeColor: 'blue',
+        friends: ['Sharron Pace'],
+        isActive: false,
+        balance: 2811,
+        gender: 'male',
+        age: 37
     },
     {
-        title: 'На берегу спокойных вод',
-        author: 'Роберт Шекли',
-        genres: ['фантастика']
+        name: 'Sharlene Bush',
+        email: 'sharlenebush@tubesys.com',
+        eyeColor: 'blue',
+        friends: ['Briana Decker', 'Sharron Pace'],
+        isActive: true,
+        balance: 3821,
+        gender: 'female',
+        age: 34
     },
     {
-        title: 'Красна как кровь',
-        author: 'Ли Танит',
-        genres: ['ужасы', 'мистика']
+        name: 'Ross Vazquez',
+        email: 'rossvazquez@xinware.com',
+        eyeColor: 'green',
+        friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+        isActive: false,
+        balance: 3793,
+        gender: 'male',
+        age: 24
+    },
+    {
+        name: 'Elma Head',
+        email: 'elmahead@omatom.com',
+        eyeColor: 'green',
+        friends: ['Goldie Gentry', 'Aisha Tran'],
+        isActive: true,
+        balance: 2278,
+        gender: 'female',
+        age: 21
+    },
+    {
+        name: 'Carey Barr',
+        email: 'careybarr@nurali.com',
+        eyeColor: 'blue',
+        friends: ['Jordan Sampson', 'Eddie Strong'],
+        isActive: true,
+        balance: 3951,
+        gender: 'male',
+        age: 27
+    },
+    {
+        name: 'Blackburn Dotson',
+        email: 'blackburndotson@furnigeer.com',
+        eyeColor: 'brown',
+        friends: ['Jacklyn Lucas', 'Linda Chapman'],
+        isActive: false,
+        balance: 1498,
+        gender: 'male',
+        age: 38
+    },
+    {
+        name: 'Sheree Anthony',
+        email: 'shereeanthony@kog.com',
+        eyeColor: 'brown',
+        friends: ['Goldie Gentry', 'Briana Decker'],
+        isActive: true,
+        balance: 2764,
+        gender: 'female',
+        age: 39
     }
 ];
-// Пиши код ниже этой строки
+console.log(users);
+const getFriends = (users) => {
+    let allFriends = users.flatMap(user => user.friends);
+    return allFriends;
+}
 
-// const genres = books.flatMap(book => book.genres);
-// console.log(genres);
-const allGenres = books.reduce((genres, book) => [...genres, ...book.genres], []);
+console.log(allFriends);
 
-console.log(allGenres);
 

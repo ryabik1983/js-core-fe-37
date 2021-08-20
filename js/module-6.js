@@ -303,7 +303,14 @@
 
 // console.log(allFriends);
 
-
+class Samurai {
+    constructor(name) {
+        this.name = name;
+    }
+    hello() { alert(this.name) }
+};
 console.log(({}).prototype === ({}).__proto__);
-
-
+let shogun = new Samurai('Dimmich');
+console.log(shogun.__proto__.__proto__);
+console.log(shogun.__proto__.constructor.__proto__);
+console.log(shogun.__proto__.__proto__.__proto__);

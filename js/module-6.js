@@ -394,12 +394,28 @@ const thirdArray = [17, 26, 94, 61, 36, 23, 18];
 // }, 0);
 // console.log(calculateTotalBalance);
 //          33
-const getTotalFriendCount = users.reduce((allFriends, user) => {
-    allFriends.push(...user.friends);
-    // return allFriends;
-    return allFriends;
-}, []);
-console.log(getTotalFriendCount);
+// const getTotalFriendCount = users.reduce((allFriends, user) => {
+//     allFriends + user.friends.length
+// }, 0);
+
+
+// console.log(countFriends);
+// return users.reduce((total, el) => { return total + el.friends.length }, 0);
+
+//          34
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+    'Ли Танит',
+    'Бернард Корнуэлл',
+    'Роберт Шекли',
+    'Федор Достоевский'
+];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = releaseDates;
+
+const alphabeticalAuthors = authors;
+
 
 
 

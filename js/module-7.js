@@ -25,3 +25,5 @@ firstMenuItem.style.color = '#BF4E30';
 console.log(firstMenuItem); // ...
 const menuItem = document.querySelector(".menu-item-1");
 console.log(menuItem);
+const navEl = document.querySelector('ul');
+console.dir(navEl);

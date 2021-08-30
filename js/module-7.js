@@ -72,7 +72,7 @@ const navElementLastChild = navEl.lastElementChild;
 console.log(navElementLastChild);
 
 const navElementFirstChild = navEl.firstElementChild;
-console.log(navElementFirstChild); 
+console.log(navElementFirstChild);
 const menuItem2 = document.querySelector('.menu-item-2');
 console.log(menuItem2);
 const prevSib = menuItem2.previousElementSibling;
@@ -80,4 +80,12 @@ console.log(prevSib);
 const nextSib = menuItem2.nextElementSibling;
 console.log(nextSib);
 
+const elTitle = document.createElement('h2');
+console.log(elTitle);
+elTitle.classList.add('page-title');
+elTitle.textContent = 'Это дополнительный заголовок!';
 
+document.body.appendChild(elTitle);
+const imageEl = document.createElement('img');
+console.log(imageEl);
+imageEl

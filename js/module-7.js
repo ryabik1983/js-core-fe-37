@@ -80,4 +80,9 @@ console.log(prevSib);
 const nextSib = menuItem2.nextElementSibling;
 console.log(nextSib);
 
+const imgEl = document.createElement('img');
+console.log(imgEl);
+// https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/
+imgEl.src = 'https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/';
+document.body.appendChild(imgEl);
 

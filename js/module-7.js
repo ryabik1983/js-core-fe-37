@@ -84,6 +84,11 @@ const elTitle = document.createElement('h2');
 console.log(elTitle);
 elTitle.classList.add('page-title');
 elTitle.textContent = 'Это дополнительный заголовок!';
+const imgEl = document.createElement('img');
+console.log(imgEl);
+// https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/
+imgEl.src = 'https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/';
+document.body.appendChild(imgEl);
 
 document.body.appendChild(elTitle);
 const imageEl = document.createElement('img');

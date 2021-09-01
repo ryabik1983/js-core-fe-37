@@ -87,10 +87,21 @@ elTitle.textContent = 'Это дополнительный заголовок!';
 const imgEl = document.createElement('img');
 console.log(imgEl);
 // https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/
-imgEl.src = 'https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/';
-document.body.appendChild(imgEl);
+// imgEl.src = 'https://pixabay.com/photos/boy-buffalo-herder-ha-giang-vietnam-6559419/';
+// document.body.appendChild(imgEl);
 
 document.body.appendChild(elTitle);
 const imageEl = document.createElement('img');
 console.log(imageEl);
-imageEl
+
+// const title = document.querySelector('h1');
+// console.log(title);
+// console.dir(title); 
+const titleById = document.querySelector('#title');
+console.log(titleById);
+const titleByClass = document.querySelector('.hero_title');
+console.log(titleByClass);
+const titleByDataAtribute = document.querySelector('[data-name = "data-title"]');
+console.log(titleByDataAtribute);
+const selectedByParent = document.querySelector ('body>input');
+console.log(selectedByParent);

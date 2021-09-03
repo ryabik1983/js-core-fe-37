@@ -11,7 +11,7 @@
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <h1 id = "title" class = "hero_title" data-name = "data-title">Hello World!</h1>
+    <h1 id="title" class="hero_title" data-name="data-title">Hello World!</h1>
     <div style="display: flex;">
         <button class="dec">-</button>
         <p>0</p>
@@ -20,16 +20,16 @@
     </div>
     <ul id="menu" class="menu">
         <li class="menu-item-1">
-            <a href="/home" class = "menu-item-link">home</a>
+            <a href="/home" class="menu-item-link">home</a>
         </li>
         <li class="menu-item-2">
-            <a href="/about" class = "menu-item-link">about</a>
+            <a href="/about" class="menu-item-link">about</a>
         </li>
         <li class="menu-item-3">
-            <a href="/gallery" class = "menu-item-link">gallery</a>
+            <a href="/gallery" class="menu-item-link">gallery</a>
         </li>
         <li class="menu-item-4">
-            <a href="/blog" class = "menu-item-link">blog</a>
+            <a href="/blog" class="menu-item-link">blog</a>
         </li>
     </ul>
     <div class="js-actions">
@@ -38,7 +38,18 @@
         <button type="button" data-action="edit">Редактировать</button>
     </div>
     <input type="text" class="js-input">
+    <button type=button class="js-target-btn">Целевая кнопка</button>
+    <button type=button class="js-add-listener">Добавить слушателя</button>
+    <button type=button class="js-remove-listener">Удалить слушателя</button>
+
+
+    <div id="counter">
+        <button type="button" data-action="decrement">-1</button>
+        <span id="value">0</span>
+        <button type="button" data-action="increment">+1</button>
+    </div>
+    <ul id="gallery"></ul>
     <script src="./index.js" type="module"></script>
 </body>
 
-</html> 
+</html>

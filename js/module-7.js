@@ -103,5 +103,87 @@ const titleByClass = document.querySelector('.hero_title');
 console.log(titleByClass);
 const titleByDataAtribute = document.querySelector('[data-name = "data-title"]');
 console.log(titleByDataAtribute);
-const selectedByParent = document.querySelector ('body>input');
+const selectedByParent = document.querySelector('body>input');
 console.log(selectedByParent);
+
+const targetBtn = document.querySelector('.js-target-btn');
+const addListenerBtn = document.querySelector('.js-add-listener');
+const removeListener = document.querySelector('.js-remove-listener');
+
+addListenerBtn.addEventListener('click', () => {
+    console.log('Вешаю слушателя события на целевую кнопку');
+    targetBtn.addEventListener('click', onTargetBtnClick
+    )
+}
+);
+removeListener.addEventListener('click', () => {
+    console.log('Снимаю слушателя события');
+    targetBtn.removeEventListener('click', onTargetBtnClick)
+});
+function onTargetBtnClick() {
+    console.log('Клик по целевой кнопке');
+};
+
+
+
+const counterValue = document.querySelector('#value');
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+let newValue = 0;
+
+const increment = () => (counterValue.textContent = newValue += 1);
+const decrement = () => (counterValue.textContent = newValue -= 1);
+
+
+
+incrementBtn.addEventListener('click', increment);
+decrementBtn.addEventListener('click', decrement);
+
+// counterValue.textContent = newValue;
+
+// const btnDecr = document.querySelector('[data-action="decrement"]'); const btnIncr = document.querySelector('[data-action="increment"]'); const spanVal = document.querySelector("#value");
+// let counterValue = 0;
+// const increment = () => (spanVal.textContent = counterValue += 1); const decrement = () => (spanVal.textContent = counterValue -= 1);
+// btnDecr.addEventListener("click", decrement); btnIncr.addEventListener("click", increment);
+
+
+// const images = [
+//     {
+//         url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//         alt: 'White and Black Long Fur Cat',
+//     },
+//     {
+//         url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//         alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+//     },
+//     {
+//         url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//         alt: 'Group of Horses Running',
+//     },
+// ];
+// const ulGallery = document.querySelector('#gallery');
+// console.log(ulGallery);
+
+// const makeListGaleryMarkup = ({ url, alt }) => {
+//     return ` <li>
+//         <img src = "${url}" alt = "${alt}">
+//     </li>`
+// }
+// const makeUlListGalery = images
+//     .map(makeListGaleryMarkup)
+//     .join('')
+// console.log(makeUlListGalery);
+// ulGallery.insertAdjacentHTML('afterbegin', makeUlListGalery);
+
+
+// -  и decrement
+// function handleTargetButtonClick() {
+//     console.log('Клик');
+// };
+
+// function targetButtonClickHandler() {
+//     console.log('Клик');
+// }
+// function onTargetButtonClick() {
+
+// };

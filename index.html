@@ -12,7 +12,7 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <h1 id="title" class="hero_title" data-name="data-title">Hello World!</h1>
-    <div style="display: flex;">
+    <!-- <div style="display: flex;">
         <button class="dec">-</button>
         <p>0</p>
         <button class="inc">+</button>
@@ -50,7 +50,30 @@
     </div>
     <ul id="gallery"></ul>
     <input type="text" placeholder="Ваше имя?" id="name-input" />
-    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+    <h1>Привет, <span id="name-output">незнакомец</span>!</h1> -->
+    <div id="parent">
+        PARENT
+        <div id="child">
+            CHILD
+            <div id="inner-child">INNER-CHILD</div>
+        </div>
+    </div>
+    <button type=button class="js-add-button">Добавить элемент</button>
+    <ul class="nav js-nav">
+        <li class="nav__element"><button class="btn" data-value="html">HTML</button></li>
+        <li class="nav__element"><button class="btn" data-value="css">CSS</button></li>
+        <li class="nav__element"><button class="btn" data-value="JavaScript">JavaScript</button></li>
+        <li class="nav__element"><button class="btn" data-value="NPM">NPM</button></li>
+        <li class="nav__element">
+            <button class="btn" data-value="Babel">Babel</button>
+        </li>
+        <li class="nav__element"><button class="btn" data-value="Webpack">Webpack</button></li>
+        <li class="nav__element">
+            <button class="btn" data-value="React">React</button>
+        </li>
+        <li class="nav__element"><button class="btn" data-value="Redux">Redux</button></li>
+        <li class="nav__element"><button class="btn" data-value="NodeJS">NodeJS</button></li>
+    </ul>
 
     <script src="./index.js" type="module"></script>
 </body>

@@ -184,47 +184,89 @@ const galleryItems = [
     description: 'Lighthouse Coast Sea',
   },
 ];
-const galleryList = document.querySelector('.js-gallery');
-// console.log(galleryList);
-// Вешаем слушателя события на список
-galleryList.addEventListener('click', onGalleryListClick)
-function onGalleryListClick(evt) {
-  //     // Фильтр цели клика
-  const isGalleryImageEl = evt.target.classList.contains('gallery__image');
-  if (!isGalleryImageEl) {
-    return;
-  }
-  console.log(evt.target.dataset.source);
-};
 
-const galleryMarkup = createGalleryCardsMarkup(galleryItems);
-// console.log(galleryMarkup);
-galleryList.insertAdjacentHTML('beforeend', galleryMarkup)
-
-// console.log(createGalleryCardsMarkup(galleryItems));
-function createGalleryCardsMarkup(items) {
-  return items
+function createItems(array) {
+  return array
     .map(({ preview, original, description }) => {
       return `
-    
-    <li class="gallery__item">
-        <a
-          class="gallery__link"
-          href="${original}"
-        >
-          <img
-            class="gallery__image"
-            src="${preview}"
-            data-source="${original}"
-            alt="${description}"
-          />
-        </a>
-      </li>
-    `;
-    }
-    )
+      <li class="gallery__item">
+      <a
+        class="gallery__link"
+        href= ${original}
+      >
+        <img
+          class="gallery__image"
+          src= ${preview}
+          data-source=${original}
+          alt=${description}
+        />
+      </a>
+    </li>`
+    })
     .join('');
+};
+const markup = createItems(galleryItems);
+// console.log(markup);
+const galleryList = document.querySelector('.js-gallery');
+// console.log(galleryList);
+galleryList.insertAdjacentHTML("afterbegin", markup);
+// console.log(galleryList);
+const options = {
+  root: galleryList,
+  rootMargin: '0px',
+  threshold: 0,
+
 }
+const observer = new IntersectionObserver(callback, options);
+function callback(entries) {
+  console.log(entries)
+};
+const items = [...galleryList.children];
+console.log(items);
+items.forEach((item) => { observer.observe(item) });
+
+
+// const galleryList = document.querySelector('.js-gallery');
+// // console.log(galleryList);
+// // Вешаем слушателя события на список
+// galleryList.addEventListener('click', onGalleryListClick)
+// function onGalleryListClick(evt) {
+//   //     // Фильтр цели клика
+//   const isGalleryImageEl = evt.target.classList.contains('gallery__image');
+//   if (!isGalleryImageEl) {
+//     return;
+//   }
+//   console.log(evt.target.dataset.source);
+// };
+
+// const galleryMarkup = createGalleryCardsMarkup(galleryItems);
+// // console.log(galleryMarkup);
+// galleryList.insertAdjacentHTML('beforeend', galleryMarkup)
+
+// // console.log(createGalleryCardsMarkup(galleryItems));
+// function createGalleryCardsMarkup(items) {
+//   return items
+//     .map(({ preview, original, description }) => {
+//       return `
+
+//     <li class="gallery__item">
+//         <a
+//           class="gallery__link"
+//           href="${original}"
+//         >
+//           <img
+//             class="gallery__image"
+//             src="${preview}"
+//             data-source="${original}"
+//             alt="${description}"
+//           />
+//         </a>
+//       </li>
+//     `;
+//     }
+//     )
+//     .join('');
+// }
 
 
 

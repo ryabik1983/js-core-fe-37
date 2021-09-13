@@ -219,11 +219,15 @@ const options = {
 }
 const observer = new IntersectionObserver(callback, options);
 function callback(entries) {
-  console.log(entries)
+  entries.forEach((entry) => {
+    console.log(entry);
+  })
 };
+// console.log(galleryList.children);
 const items = [...galleryList.children];
 console.log(items);
-items.forEach((item) => { observer.observe(item) });
+
+items.forEach((item) => observer.observe(item));
 
 
 // const galleryList = document.querySelector('.js-gallery');

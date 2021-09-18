@@ -187,11 +187,13 @@
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "parcel-bundler": "^1.12.5",
     "webpack": "^5.53.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib"
+    "dev": "parcel <your entry file>",
+    "build": "parcel build <your entry file>"
   },
   "repository": {
     "type": "git",
